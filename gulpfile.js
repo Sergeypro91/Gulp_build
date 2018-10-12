@@ -14,7 +14,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 		.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 		.pipe(autoprefixer({
-			browsers: ['last 15 versions'],
+			browsers: ['last 2 versions'],
 			grid: true
 		}))
 		.pipe(gulp.dest('app/css'))

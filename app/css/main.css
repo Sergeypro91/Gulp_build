@@ -1,57 +1,32 @@
 @import url(normalize.css);
-body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+html {
   min-height: 100vh;
+  height: 100%;
 }
 
-body .table-layout {
-  width: 100%;
-  height: 100vh;
-  display: contents;
+.body {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 80px 1fr 220px;
+      grid-template-rows: 80px 1fr 220px;
 }
 
-body .table-layout .header {
-  width: 100%;
-  height: 80px;
-  background: black;
+.body .header {
+  background: gray;
+  -ms-grid-row: 1;
+  grid-row: 1;
 }
 
-body .table-layout .content-body {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.body .main {
+  -ms-grid-row: 2;
+  grid-row: 2;
 }
 
-body .table-layout .footer {
-  width: 100%;
-  height: 100px;
-  background: black;
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  html, body {
-    height: 100%;
-  }
-  .table-layout {
-    width: 100%;
-    height: 100%;
-    display: table;
-  }
-  .header, .footer {
-    display: table-row;
-    height: 1px;
-  }
+.body .footer {
+  background: gray;
+  -ms-grid-row: 3;
+  grid-row: 3;
 }
